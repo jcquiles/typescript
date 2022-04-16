@@ -1,5 +1,5 @@
 # Typescript with Amazon CDK
-This is a project using Typescript with Amazon CDK to create two s3 buckets with infrastrucutre as software. An s3 bucket with encryption and one without.  
+This is a project using Typescript with Amazon CDK to create s3 buckets with infrastrucutre as software. Creates encrypted s3 bucket.  
 
 ## High Level Overview:
 
@@ -30,23 +30,25 @@ The AWS Cloud Development Kit (AWS CDK) is an open-source software development f
 * Install AWS CDK. `npm install aws-cdk`
 * Clone the repository locally. `https://github.com/jcquiles/typescript.git`
 * Init CDK language.  `cdk init app --language typescript`
-
+---------------------------------------------------------------------------------
 * **Creating a project also installs the core module and its dependencies.**
 * **The AWS CDK core module is named @aws-cdk/core. AWS Construct Library modules are named like @aws-cdk/SERVICE-NAME.**
-
+---------------------------------------------------------------------------------
 * Install CDK package for s3. `npm install aws-cdk-lib/aws-s3`
 * **In AWS CDK 1.x, imports were done using import were made from '@aws-cdk/core'. This was changed in CDK 2.x, in which imports are made from aws-cdk-lib package.**
-
+----------------------------------------------------------------------------------
 * **Your project's dependencies are maintained in package.json.**
-
+----------------------------------------------------------------------------------
 * Update NPM dependencies to latest version: `npm update`
 * **For the step above make sure you are in your AWS CDK folder.**
-
+----------------------------------------------------------------------------------
 ### Explaining the code:
 * The **lib/aws-cdk-project-stack.ts** file is where the code to deploy lives.
 * At the top of the file were are importing the cdk and cdk s3 packages.
 * Below that it is creating a string to create the non encrypted bucket.
+----------------------------------------------------------------------------------
 * **make sure to make the name of the bucket unique**
+----------------------------------------------------------------------------------
 * The code is then creating the class of the cdk and then using the constructor to create the object for the cdk.
 * It then calls the s3 package with the bucket function which will then take in the selected bucket name and enable encryption on to the s3 bucket.
 * Finally, on the backend after deploying the cdk file it creates a cloudformation template for you.
