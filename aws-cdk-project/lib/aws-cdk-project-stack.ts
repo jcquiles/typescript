@@ -23,4 +23,3 @@ export class AwsCdkProjectStack extends Stack {
 
   }
 }
-
