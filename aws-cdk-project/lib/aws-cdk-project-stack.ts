@@ -11,7 +11,16 @@ export class AwsCdkProjectStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    new s3.Bucket(this, s3Bucket);
+    // new s3.Bucket(this, s3Bucket);
+
+    const bucket = new s3.Bucket(this, 'MyEncryptedBucket', {
+      encryption: s3.BucketEncryption.KMS,
+      // blockPublicAccess: new s3.BlockPublicAccess({ blockPublicPolicy: true })
+    });
+    
+    // // you can access the encryption key:
+    // assert(bucket.encryptionKey instanceof kms.Key);
+
   }
 }
 
