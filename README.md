@@ -46,14 +46,11 @@ The AWS Cloud Development Kit (AWS CDK) is an open-source software development f
 * The **lib/aws-cdk-project-stack.ts** file is where the code to deploy lives.
 * At the top of the file were are importing the cdk and cdk s3 packages.
 * Below that it is creating a string to create the non encrypted bucket.
-----------------------------------------------------------------------------------
-* **make sure to make the name of the bucket unique**
-----------------------------------------------------------------------------------
 * The code is then creating the class of the cdk and then using the constructor to create the object for the cdk.
 * It then calls the s3 package with the bucket function which will then take in the selected bucket name and enable encryption on to the s3 bucket.
 * Finally, on the backend after deploying the cdk file it creates a cloudformation template for you.
 
-### Run and Destroy
+### Run and Destroy:
 * Create s3 bucket in AWS. `cdk deploy`
 * Verify the ARN of the s3 bucket and cloudformation were created in the console.
 * Delete s3 bucket. `cdk destroy`
