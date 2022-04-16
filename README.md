@@ -42,6 +42,9 @@ The AWS Cloud Development Kit (AWS CDK) is an open-source software development f
 * Update NPM dependencies to latest version: `npm update`
 * **For the step above make sure you are in your AWS CDK folder.**
 ----------------------------------------------------------------------------------
+* **The first time you deploy an AWS CDK app into an environment (account/region), you can install a “bootstrap stack”. This stack includes resources that are used in the toolkit’s operation.** 
+* Bootstrap CDK. `cdk bootstrap`
+----------------------------------------------------------------------------------
 ### Explaining the code:
 * The **lib/aws-cdk-project-stack.ts** file is where the code to deploy lives.
 * At the top of the file were are importing the cdk and cdk s3 packages.
