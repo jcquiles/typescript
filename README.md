@@ -1,5 +1,5 @@
 # Typescript with Amazon CDK
-This is a project using Typescript with Amazon CDK to create s3 buckets with infrastrucutre as software. Creates encrypted s3 bucket.  
+This is a project using Typescript with Amazon CDK to create an encrypted s3 bucket with infrastrucutre as software. 
 
 ## High Level Overview:
 
